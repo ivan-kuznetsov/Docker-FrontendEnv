@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend-nginx:
+    volumes:
+      - ./:/var/www/
+    build:
+      context: ./docker/frontend/nginx
+    ports:
+      - "8888:80"
+  frontend-nodejs:
+    volumes:
+      - ./:/var/www/
+    build:
+      context: ./docker/frontend/nodejs
+    tty: true
