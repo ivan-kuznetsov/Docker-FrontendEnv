@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack --config webpack.config.js",
-        "watch": "webpack --config webpack.config.js --watch"
+        "prod": "webpack --config ./build/webpack.prod.js",
+        "dev": "webpack --config ./build/webpack.dev.js",
+        "watch": "webpack --config ./build/webpack.dev.js --watch"
     },
     "author": "",
     "license": "ISC",
@@ -17,8 +17,13 @@
         "browser-sync": "^2.26.3",
         "browser-sync-webpack-plugin": "^2.2.2",
         "css-loader": "^2.1.0",
+        "mini-css-extract-plugin": "^0.5.0",
         "node-sass": "^4.11.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.1",
         "sass-loader": "^7.1.0",
-        "style-loader": "^0.23.1"
+        "style-loader": "^0.23.1",
+        "uglifyjs-webpack-plugin": "^2.1.1",
+        "webpack": "^4.28.4",
+        "webpack-cli": "^3.2.1"
     }
 }

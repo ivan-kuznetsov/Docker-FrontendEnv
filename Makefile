@@ -22,6 +22,10 @@ restart:
 shell:
 	$(docker_compose) exec "$(NODE_CONTAINER_NAME)" /bin/bash
 
+
+webpack:
+	$(docker_compose) run --rm "$(NODE_CONTAINER_NAME)" ./docker/frontend/nodejs/config.sh
+	
 install:
 	$(docker_compose) run --rm "$(NODE_CONTAINER_NAME)" npm install
 
