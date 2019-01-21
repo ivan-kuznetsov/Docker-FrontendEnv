@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "prod": "webpack --config ./webpack.config/webpack.prod.js",
-        "dev": "webpack --config ./webpack.config/webpack.dev.js",
-        "watch": "webpack --config ./webpack.config/webpack.dev.js --watch"
+        "prod": "node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config ./webpack.config/webpack.prod.js",
+        "dev": " node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config ./webpack.config/webpack.dev.js",
+        "watch": "node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config ./webpack.config/webpack.dev.js --watch"
     },
     "author": "",
     "license": "ISC",
